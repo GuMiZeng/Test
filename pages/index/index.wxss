@@ -1,0 +1,77 @@
+.index-banner, .index-banner-visitCard {
+  width: 750rpx;
+  height: 435rpx;
+}
+
+.index-saving {
+  position: relative;
+  width: 750rpx;
+  height: 90rpx;
+}
+
+.index-saving .index-saving-data {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  color: #fff;
+}
+
+.index-saving-data-memNum {
+  font-size: 32rpx;
+  color: #ead09e;
+}
+
+.index-saving-data-memText {
+  margin-right: 18rpx;
+  font-size: 26rpx;
+}
+
+.index-saving-data-saveText {
+  font-size: 24rpx;
+}
+
+.index-saving-data-costNum {
+  font-size: 28rpx;
+  color: #e2c790;
+  text-decoration: underline;
+}
+
+.index-saving-data-unit {
+  font-size: 20rpx;
+}
+
+.index-saving .index-saving-bg {
+  width: 100%;
+  height: 100%;
+}
+
+.index-special {
+  margin: 60rpx 0 156rpx 0;
+  width: 750rpx;
+  height: 1179rpx;
+}
+.index-site-link-bottom{
+  height: 195rpx;
+}
+.index-site-link-button{
+  width: 600rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 0 auto 24rpx;
+  border-radius: 40rpx;
+  text-align: center;
+  color: #000;
+  font-size: 30rpx;
+}
+.index-site-link-button-active{
+  border: 1rpx solid #EEDDB7;
+  background-color: #EEDDB7;
+}
+.index-site-link-button-defualt{
+  border: 1rpx solid #000;
+  background-color: #ffffff;
+}

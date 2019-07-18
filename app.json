@@ -1,0 +1,27 @@
+{
+  "pages": [
+    "pages/memberCenter/memberCenter",
+    "pages/index/index",
+    "pages/memberBuy/memberBuy",
+    "pages/savingLog/savingLog"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "wechat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/memberCenter/memberCenter",
+        "text": "会员"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
