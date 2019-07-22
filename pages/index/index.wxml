@@ -1,6 +1,7 @@
 <!--index.wxml-->
 <view class="index">
   <view class='index-banner'>
+  <image class='index-banner-logo' src='/assets/imgs/logo.png'></image>
     <image class='index-banner-visitCard' src='/assets/imgs/member-visitCard.png'></image>
   </view>
   <view class='index-saving'>
@@ -15,8 +16,8 @@
   </view>
   <image class='index-special' src='/assets/imgs/member-special.png'></image>
   <view class='index-site-link'>
-    <view class='index-site-link-button index-site-link-button-active'>99元/年 立即开通</view>
-    <view class='index-site-link-button index-site-link-button-defualt'>去商城逛逛</view>
+    <view class='index-site-link-button index-site-link-button--active'>99元/年 立即开通</view>
+    <view class='index-site-link-button index-site-link-button--defualt'>去商城逛逛</view>
     <view class='index-site-link-bottom'></view>
   </view>
 </view>

@@ -3,7 +3,8 @@
     "pages/memberCenter/memberCenter",
     "pages/index/index",
     "pages/memberBuy/memberBuy",
-    "pages/savingLog/savingLog"
+    "pages/savingLog/savingLog",
+    "template/goods"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,76 @@
+.member-center-super-goods-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 20rpx;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #e0e0e0;
+}
+.member-center-super-goods-item:last-child{
+  border-bottom: 1rpx solid transparent;
+}
+
+.member-center-super-goods-item-img {
+  width: 300rpx;
+  height: 240rpx;
+  border-radius: 10rpx;
+}
+
+.member-center-super-goods-item-info {
+  width: 390rpx;
+}
+
+.member-center-super-goods-item-info-title {
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.member-center-super-goods-item-info-summary {
+  margin-top: 19rpx;
+  height: 53rpx;
+  word-break: break-all;
+  line-height: 1.2;
+  font-size: 22rpx;
+  color: #6b6b6b;
+  overflow: hidden;
+}
+
+.member-center-super-goods-item-info-price {
+  margin-top: 40rpx;
+  display: flex;
+  line-height: 0.8;
+  color: #dc3e36;
+}
+
+.member-center-super-goods-item-info-price-unit {
+  font-size: 28rpx;
+}
+
+.member-center-super-goods-item-info-price-number {
+  font-size: 46rpx;
+}
+
+.member-center-super-goods-item-info-price-tag {
+  margin-left: 10rpx;
+  width: 60rpx;
+  height: 22rpx;
+}
+
+.member-center-super-goods-item-info-tips {
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20rpx;
+}
+
+.member-center-super-goods-item-info-tips-price {
+  text-decoration: line-through;
+  color: #949494;
+}
+
+.member-center-super-goods-item-info-tips-distance {
+  color: #6b6b6b;
+}

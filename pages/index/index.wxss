@@ -1,3 +1,13 @@
+.index-banner{
+  position: relative;
+}
+.index-banner-logo{
+  position: absolute;
+  left: 50%;
+  width: 116rpx;
+  height: 65rpx;
+  margin: 27rpx 0 0 -58rpx;
+}
 .index-banner, .index-banner-visitCard {
   width: 750rpx;
   height: 435rpx;
@@ -67,11 +77,11 @@
   color: #000;
   font-size: 30rpx;
 }
-.index-site-link-button-active{
+.index-site-link-button--active{
   border: 1rpx solid #EEDDB7;
   background-color: #EEDDB7;
 }
-.index-site-link-button-defualt{
+.index-site-link-button--defualt{
   border: 1rpx solid #000;
   background-color: #ffffff;
 }

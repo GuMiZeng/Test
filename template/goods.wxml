@@ -1,0 +1,20 @@
+<template name="superPriceList">
+  <view class='member-center-super-goods-item'>
+    <image class='member-center-super-goods-item-img' src='{{img}}'></image>
+    <view class='member-center-super-goods-item-info'>
+      <view class='member-center-super-goods-item-info-title'>{{title}}</view>
+      <view class='member-center-super-goods-item-info-summary'>{{summary}}</view>
+      <view class='member-center-super-goods-item-info-price'>
+        <view class='member-center-super-goods-item-info-price-text'>
+          <text class='member-center-super-goods-item-info-price-unit'>￥</text>
+          <text class='member-center-super-goods-item-info-price-number'>{{price}}</text>
+        </view>
+        <image class='member-center-super-goods-item-info-price-tag' src='/assets/imgs/hp-product-member.png'></image>
+      </view>
+      <view class='member-center-super-goods-item-info-tips'>
+        <text class='member-center-super-goods-item-info-tips-price'>￥{{oldPrice}}</text>
+        <text class='member-center-super-goods-item-info-tips-distance'>{{distance}}km</text>
+      </view>
+    </view>
+  </view>
+</template>
