@@ -17,7 +17,7 @@
 }
 
 .member-center-super-goods-item-info {
-  width: 390rpx;
+  width: 392rpx;
 }
 
 .member-center-super-goods-item-info-title {
@@ -30,11 +30,12 @@
 
 .member-center-super-goods-item-info-summary {
   margin-top: 19rpx;
-  height: 53rpx;
+  height: 60rpx;
+  line-height: 30rpx;
   word-break: break-all;
-  line-height: 1.2;
   font-size: 22rpx;
   color: #6b6b6b;
+  letter-spacing: 1rpx;
   overflow: hidden;
 }
 

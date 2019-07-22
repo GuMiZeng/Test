@@ -1,5 +1,5 @@
 /* pages/member/member.wxss */
-@import '/template/goods.wxss';
+@import '/template/goodsList.wxss';
 
 .member-center-banner {
   position: relative;
@@ -83,6 +83,7 @@
   background-color: #eeddb7;
   font-size: 32rpx;
   color: #333;
+  letter-spacing: 2rpx;
 }
 
 .member-center-banner-button--bold {
@@ -243,7 +244,7 @@
 .menmber-center-vip-item-text {
   position: relative;
   display: inline-block;
-  margin-top: 30rpx;
+  margin-top: 36rpx;
   z-index: 2;
 }
 
@@ -255,7 +256,7 @@
 }
 
 .menmber-center-vip-item-text--two {
-  padding: 0 35rpx;
+  padding: 2rpx 27rpx;
   background-color: #eeddb9;
   border-radius: 10rpx;
 }

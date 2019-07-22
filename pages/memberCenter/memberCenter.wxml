@@ -1,4 +1,4 @@
-<import src="/template/goods.wxml" />
+<import src="/template/goodsList.wxml" />
 <view wx:if="{{isMember}}" class='member-center-banner'>
   <image class='member-canter-banner-active' src='/assets/imgs/memberCardBg.png'></image>
   <view class='member-center-banner-info'>
@@ -12,7 +12,7 @@
     </view>
   </view>
 </view>
-<view ex:else class='member-center-banner'>
+<view wx:else class='member-center-banner'>
   <image class='member-center-banner-default' src='/assets/imgs/touristCardBg.png'></image>
   <view class='member-center-banner-button'>立即开通PLUS会员
     <text class='member-center-banner-button--bold'>99元/年</text>
@@ -25,66 +25,69 @@
   </view>
   <scroll-view scroll-x enable-flex="true">
     <view class='member-center-privilege-list'>
-      <view class='member-center-privilege-list-item' data-index="{{index}}" bindtap='toPricvilege' wx:for="{{specialList}}" wx:for-index="index">
-        <view class="member-center-privilege-list-item-icon {{privilegeActive == index ? 'member-center-privilege-list-item-icon--active' : ''}}">
+      <view class='member-center-privilege-list-item' data-index="{{index}}" bindtap='toPricvilege' wx:for="{{specialList}}" wx:for-index="index" wx:key="index">
+        <view class="member-center-privilege-list-item-icon {{showDetail == index ? 'member-center-privilege-list-item-icon--active' : ''}}">
           <image mode='widthFix' src="{{item.icon}}"></image>
         </view>
         <view class='member-center-privilege-list-item-name'>{{item.name}}</view>
-        <view wx:if="{{privilegeActive == index }}" class='member-center-privilege-list-item-arrow'></view>
+        <view wx:if="{{showDetail == index }}" class='member-center-privilege-list-item-arrow'></view>
       </view>
     </view>
   </scroll-view>
 </view>
-<view wx:if="{{privilegeActive != -1}}" class='member-center-privilege-isActive'>
-  <view class='member-center-privilege-isActive-title'>{{specialList[privilegeActive].name}}</view>
+<view wx:if="{{showDetail != -1}}" class='member-center-privilege-isActive'>
+  <view class='member-center-privilege-isActive-title'>{{specialList[showDetail].name}}</view>
   <view class='member-center-privilege-isActive-line'></view>
   <view class='member-center-privilege-isActive-content'>
-    <view class='member-center-privilege-isActive-content-text'>{{specialList[privilegeActive].summary}}</view>
-    <image class='member-center-privilege-isActive-content-icon' src="{{specialList[privilegeActive].icon}}"></image>
+    <view class='member-center-privilege-isActive-content-text'>{{specialList[showDetail].summary}}</view>
+    <image class='member-center-privilege-isActive-content-icon' src="{{specialList[showDetail].icon}}"></image>
   </view>
 </view>
-<view class='member-center-vip'>
-  <!-- 三专享 -->
-  <block wx:for="{{vipList3}}" wx:key="item">
-    <view class='member-center-vip-item member-center-vip-item--three'>
-      <view class='member-center-vip-item-tag'>专享</view>
-      <view class='menmber-center-vip-item-text'>
-        <text class='menmber-center-vip-item-text--normal'>{{item.text1}}</text>
-        <text class="menmber-center-vip-item-text--normal menmber-center-vip-item-text--large">{{item.text2}}</text>
+<block wx:if="{{isMember}}">
+  <view wx:if="{{welfareLevel===3}}" class='member-center-vip'>
+    <!-- 三专享 -->
+    <block wx:for="{{welfareListThree}}" wx:key="index">
+      <view class='member-center-vip-item member-center-vip-item--three'>
+        <view class='member-center-vip-item-tag'>专享</view>
+        <view class='menmber-center-vip-item-text'>
+          <text class='menmber-center-vip-item-text--normal'>{{item.points}}</text>
+          <text class="menmber-center-vip-item-text--normal menmber-center-vip-item-text--large">{{item.welfare}}</text>
+        </view>
+        <image class='member-center-vip-item-bg' src='{{item.bgIcon}}'></image>
       </view>
-      <image class='member-center-vip-item-bg' src='{{item.bgIcon}}'></image>
-    </view>
-  </block>
-</view>
-<view class='member-center-vip'>
-  <!-- 两专享 -->
-  <block wx:for="{{vipList2}}" wx:key="item">
-    <view class='member-center-vip-item member-center-vip-item--two'>
-      <view class='member-center-vip-item-tag'>专享</view>
-      <view class='menmber-center-vip-item-text menmber-center-vip-item-text--two'>
-        <text class='menmber-center-vip-item-text--normal'>{{item.text1}}</text>
-        <text class="menmber-center-vip-item-text--normal menmber-center-vip-item-text--large">{{item.text2}}</text>
+    </block>
+  </view>
+  <view wx:if="{{welfareLevel===2}}" class='member-center-vip'>
+    <!-- 两专享 -->
+    <block wx:for="{{welfareListTwo}}" wx:key="index">
+      <view class='member-center-vip-item member-center-vip-item--two'>
+        <view class='member-center-vip-item-tag'>专享</view>
+        <view class='menmber-center-vip-item-text menmber-center-vip-item-text--two'>
+          <text class='menmber-center-vip-item-text--normal'>{{item.points}}</text>
+          <text class="menmber-center-vip-item-text--normal menmber-center-vip-item-text--large">{{item.welfare}}</text>
+        </view>
+        <image class='member-center-vip-item-bg' src='{{item.bgIcon}}'></image>
       </view>
-      <image class='member-center-vip-item-bg' src='{{item.bgIcon}}'></image>
-    </view>
-  </block>
-</view>
-<view class='member-center-vip'>
-  <!-- 一专享 -->
-  <block wx:for="{{vipList1}}" wx:key="item">
-    <view class='member-center-vip-item member-center-vip-item--one'>
-      <view class='member-center-vip-item-tag'>专享</view>
-      <view class='menmber-center-vip-item-text menmber-center-vip-item-text--one'>
-        <text class='menmber-center-vip-item-text--normal'>{{item.text1}}{{item.text2}}</text>
+    </block>
+  </view>
+  <view wx:if="{{welfareLevel===1}}" class='member-center-vip'>
+    <!-- 一专享 -->
+    <block wx:for="{{welfareListOne}}" wx:key="index">
+      <view class='member-center-vip-item member-center-vip-item--one'>
+        <view class='member-center-vip-item-tag'>专享</view>
+        <view class='menmber-center-vip-item-text menmber-center-vip-item-text--one'>
+          <text class='menmber-center-vip-item-text--normal'>{{item.points}}{{item.welfare}}</text>
+        </view>
+        <image class='member-center-vip-item-bg' src='{{item.bgIcon}}'></image>
       </view>
-      <image class='member-center-vip-item-bg' src='{{item.bgIcon}}'></image>
-    </view>
-  </block>
-</view>
+    </block>
+  </view>
+</block>
+
 <view class='member-center-super'>
   <image class='member-center-super-title' src='/assets/imgs/superPrice.png'></image>
   <view class='member-center-super-goods'>
-    <block wx:for="{{superList}}">
+    <block wx:for="{{superList}}" wx:key="index">
       <template is="superPriceList" data="{{...item}}"></template>
     </block>
   </view>

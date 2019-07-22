@@ -1,10 +1,7 @@
 {
   "pages": [
     "pages/memberCenter/memberCenter",
-    "pages/index/index",
-    "pages/memberBuy/memberBuy",
-    "pages/savingLog/savingLog",
-    "template/goods"
+    "pages/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

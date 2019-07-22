@@ -5,8 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    isMember: 0,
-    privilegeActive: -1,
+    isMember: 1,
+    showDetail: -1,
+    welfareLevel: 3,
     specialList: [{
         name: '专项会员价',
         icon: '/assets/imgs/member-price.png',
@@ -36,31 +37,31 @@ Page({
         summary: '全场标注“特权退”产品，会员如整笔订单未使用均可退。'
       }
     ],
-    vipList3: [{
-      text1: '邀请好友',
-      text2: '赢现金',
+    welfareListThree: [{
+      points: '邀请好友',
+      welfare: '赢现金',
       bgIcon: '/assets/imgs/yao.png'
     }, {
-      text1: 'PLUS会员',
-      text2: '免费试玩',
+      points: 'PLUS会员',
+      welfare: '免费试玩',
       bgIcon: '/assets/imgs/mian.png'
     }, {
-      text1: '加入会员',
-      text2: '福利群',
+      points: '加入会员',
+      welfare: '福利群',
       bgIcon: '/assets/imgs/fu.png'
     }],
-    vipList2: [{
-      text1: '邀请好友',
-      text2: '赢现金',
+    welfareListTwo: [{
+      points: '邀请好友',
+      welfare: '赢现金',
       bgIcon: '/assets/imgs/yao.png'
     }, {
-      text1: 'PLUS会员',
-      text2: '免费试玩',
+      points: 'PLUS会员',
+      welfare: '免费试玩',
       bgIcon: '/assets/imgs/mian.png'
     }],
-    vipList1: [{
-      text1: '邀请好友',
-      text2: '赢现金',
+    welfareListOne: [{
+      points: '邀请好友',
+      welfare: '赢现金',
       bgIcon: '/assets/imgs/yao.png'
     }],
     superList: [{
@@ -87,9 +88,8 @@ Page({
 
   },
   toPricvilege(e) {
-    console.log(e)
     this.setData({
-      privilegeActive: e.currentTarget.dataset.index
+      showDetail: e.currentTarget.dataset.index
     })
   },
   /**
