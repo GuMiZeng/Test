@@ -16,7 +16,7 @@
   </view>
   <image class='index-special' src='/assets/imgs/member-special.png'></image>
   <view class='index-site-link'>
-    <view class='index-site-link-button index-site-link-button--active'>99元/年 立即开通</view>
+    <view class='index-site-link-button index-site-link-button--active' data-link='/pages/memberCenter/memberCenter' bindtap='toNav'>99元/年 立即开通</view>
     <view class='index-site-link-button index-site-link-button--defualt'>去商城逛逛</view>
     <view class='index-site-link-bottom'></view>
   </view>

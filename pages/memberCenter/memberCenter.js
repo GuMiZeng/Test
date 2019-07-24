@@ -5,8 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    isMember: 1,
-    showDetail: -1,
+    isMember: 0,
+    showDetail: 0,
     welfareLevel: 3,
     specialList: [{
         name: '专项会员价',

@@ -1,8 +1,7 @@
 {
   "pages": [
-    "pages/memberPay/memberPay",
-    "pages/memberCenter/memberCenter",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/memberCenter/memberCenter"
   ],
   "window": {
     "backgroundTextStyle": "light",
